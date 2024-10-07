@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Login/Signup</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" required>
+
+            <label for="loginPassword">Password:</label>
+            <div class="password-container">
+                <input type="password" id="loginPassword" required>
+                <span id="togglePassword" class="eye">&#128065;</span>
+            </div>
+
+            <button type="button" onclick="login()">Login</button>
+            <p><a href="#" onclick="forgotPassword()">Forgot password?</a></p>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Signup</a></p>
+        </form>
+    </div>
+
+    <!-- Signup Form -->
+    <div class="container" id="signupContainer" style="display:none;">
+        <h2>Signup</h2>
+        <form id="signupForm">
+            <label for="signupUsername">Create Username:</label>
+            <input type="text" id="signupUsername" required>
+
+            <label for="signupPhone">Phone Number:</label>
+            <input type="tel" id="signupPhone" required>
+
+            <label for="signupPassword">Create Password:</label>
+            <input type="password" id="signupPassword" required>
+
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" required><br>
+
+            <button type="button" onclick="signup()">Signup</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+        </form>
+    </div>
+
+    <!-- OTP Verification Form -->
+    <div class="container" id="otpContainer" style="display:none;">
+        <h2>Enter OTP</h2>
+        <p>An OTP has been sent to your phone number.</p>
+        <form id="otpForm">
+            <label for="otpInput">OTP:</label>
+            <input type="text" id="otpInput" required><br>
+            <button type="button" onclick="verifyOTP()">Next</button>
+        </form>
+    </div>
+
+    <!-- Reset Password Form -->
+    <div class="container" id="resetPasswordContainer" style="display:none;">
+        <h2>Reset Password</h2>
+        <form id="resetPasswordForm">
+            <label for="newPassword">New Password:</label>
+            <input type="password" id="newPassword" required>
+
+            <label for="confirmNewPassword">Confirm New Password:</label>
+            <input type="password" id="confirmNewPassword" required><br>
+
+            <button type="button" onclick="resetPassword()">Next</button>
+        </form>
+    </div>
+
+    <!-- Welcome Page -->
+    <div class="container" id="welcomeContainer" style="display:none;">
+        <h2>Welcome, <span id="welcomeUsername"></span>!</h2>
+    </div>
+</body>
+</html>

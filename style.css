@@ -1,0 +1,128 @@
+/* General styles for all devices */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 100%; /* Ensuring it takes full width */
+    max-width: 400px; /* Max width for desktop to prevent too much stretching */
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%; /* Full width for the input fields */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+button {
+    width: 100%; /* Full width for buttons */
+    padding: 12px;
+    background-color: #4285F4;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Password Container to Hold Both Password Field and Eye Icon */
+.password-container {
+    position: relative;
+    width: 100%;
+    margin: 10px 0;
+}
+
+/* Eye Icon Positioned within the Password Container */
+.eye {
+    position: absolute;
+    right: 10px; /* Adjust this value as needed */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+/* Add padding-right to input field to leave space for the eye icon */
+input {
+    padding-right: 40px;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust container width for smaller screens */
+        padding: 15px;
+    }
+
+    input {
+        font-size: 14px; /* Slightly smaller text on mobile */
+        padding: 8px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px; /* Slightly smaller buttons on mobile */
+    }
+
+    h2 {
+        font-size: 22px; /* Adjust font size for smaller screens */
+    }
+
+    .eye {
+        right: 8px; /* Adjust the position of the eye icon */
+    }
+}
+
+/* Design for Very Small Screens (e.g., phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    body {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .container {
+        width: 95%; /* Maximize usage of screen width */
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 12px;
+        padding: 7px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 12px;
+    }
+}
